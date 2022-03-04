@@ -18,7 +18,7 @@ Welcome to the app that's all about you, here we'll talk about what's special. Y
 - Git clone the repository.
 - Make sure the live server extension is installed.
 - Click on Go live.
-- 
+
 ## Contact
 incase of any errors, reach me on apondioti@gmail.com
 
