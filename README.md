@@ -22,4 +22,11 @@ Welcome to the app that's all about you, here we'll talk about what's special. Y
 ## Contact
 incase of any errors, reach me on apondioti@gmail.com
 
+## Live Link
+
+## Display
+
 ## License
+MIT License
+
+Copyright (c) 2022 Apondi Otieno
