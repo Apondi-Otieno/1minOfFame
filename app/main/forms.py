@@ -5,3 +5,9 @@ from wtforms.validators import Required
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Write a brief bio about you.',validators = [Required()])
     submit = SubmitField('Save')
+    
+class PitchForm(FlaskForm):
+    title = StringField('Title', validators=[Required()])
+    category = SelectField('Category', choices=[('Interview','Interview'),('Product','Product'),('Promotion','Promotion')],validators=[Required()])
+    post = TextAreaField('Your Pitch', validators=[Required()])
+    submit = SubmitField('Pitch')
