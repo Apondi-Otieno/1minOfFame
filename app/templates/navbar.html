@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="/">
+                <pitches> ONE MINUTE OF FAME</pitches>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">INTERVIEW PITCH</a></li>
+                <li><a href="/">PRODUCT PITCH</a></li>
+                <li><a href="/">PROMOTION PITCH</a></li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            
+                <li class="">
+                    {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a id="create-acc" class="nav-link" href="{{url_for('main.new_pitch')}}">Create New Pitch</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style= 'margin-right:30px' data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>&nbsp;<strong>{{current_user.username}}</strong> </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info"
+                        aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="{{url_for('main.profile',name=current_user.username)}}"><i
+                                class="far fa-user"></i>&nbsp; My account</a><br>
+                        <a class="dropdown-item" href="{{url_for('auth.logout')}}"><i
+                                class="fas fa-sign-out-alt"></i>&nbsp; Log out
+                        </a>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('auth.login')}}" style= 'margin-right:30px'><i
+                            class="fas fa-sign-in-alt"></i>&nbsp; <strong>LOGIN</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a style ='margin-right:30px' class="nav-link" href="{{url_for('auth.signup')}}"><i
+                            class="fas fa-user-plus"></i> &nbsp; <strong>SIGN UP</strong></a>
+                </li>
+                {%endif%}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
