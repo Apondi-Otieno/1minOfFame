@@ -23,8 +23,8 @@ Welcome to the app that's all about you, here we'll talk about what's special. Y
 incase of any errors, reach me on apondioti@gmail.com
 
 ## Live Link
+https://lit-beyond-12573.herokuapp.com/
 
-## Display
 
 ## License
 MIT License
